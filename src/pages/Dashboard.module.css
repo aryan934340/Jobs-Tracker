@@ -1,0 +1,233 @@
+.page { animation: fadeIn 0.3s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sub {
+  color: var(--text2);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.addBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.addBtn:hover { opacity: 0.85; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 18px;
+  align-items: start;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.cardHeader h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.viewAll {
+  font-size: 13px;
+  color: var(--accent2);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.viewAll:hover { opacity: 0.7; }
+
+/* Recent List */
+.recentList { display: flex; flex-direction: column; gap: 2px; }
+
+.recentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+  gap: 12px;
+}
+
+.recentRow:hover { background: var(--bg3); }
+
+.recentLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.companyAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent2);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recentCompany {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recentRole {
+  font-size: 12px;
+  color: var(--text2);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recentRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.recentDate {
+  font-size: 12px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+.empty {
+  color: var(--text3);
+  font-size: 14px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* Rate */
+.rateWrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.rateCircle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.rateCircle svg { width: 100%; height: 100%; }
+
+.rateNum {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rateLabel { font-size: 14px; font-weight: 500; color: var(--text); }
+.rateSub { font-size: 12px; color: var(--text2); margin-top: 2px; }
+
+/* Pipeline */
+.pipeline { display: flex; flex-direction: column; gap: 10px; }
+
+.pipelineRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pipelineLabel {
+  font-size: 13px;
+  color: var(--text2);
+  width: 68px;
+  flex-shrink: 0;
+}
+
+.pipelineBar {
+  flex: 1;
+  height: 6px;
+  background: var(--bg3);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.pipelineBarFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.8s ease;
+  min-width: 2px;
+}
+
+.pipelineCount {
+  font-size: 13px;
+  color: var(--text2);
+  width: 20px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
